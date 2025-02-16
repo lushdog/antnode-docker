@@ -7,7 +7,7 @@ services:
     network_mode: 'host'
     volumes:
       - ./antnode_data:/root/antnode_data
-      - ./autonom_data:/root/.local/share/autonom
+      - ./autonom_data:/root/.local/share/autonomi
     environment:
       - REWARD_ADDRESS=${REWARD_ADDRESS}
       - NODE_COUNT=${NODE_COUNT}
