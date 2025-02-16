@@ -1,0 +1,18 @@
+name: antnode
+
+services:
+  node:
+    image: ghcr.io/lushdog/antnode:latest
+    restart: unless-stopped
+    network_mode: 'host'
+    volumes:
+      - ./antnode_data:/root/antnode_data
+      - ./autonom_data:/root/.local/share/autonom
+    environment:
+      - REWARD_ADDRESS=${REWARD_ADDRESS}
+      - NODE_COUNT=${NODE_COUNT}
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: 2048m
