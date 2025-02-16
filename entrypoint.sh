@@ -8,7 +8,7 @@ for ((COUNT=1; COUNT<=NODE_COUNT; COUNT++)); do
     echo "start $COUNT node"
     mkdir -p /root/antnode_data/node_$COUNT
     ./antnode --rewards-address $REWARD_ADDRESS --root-dir /root/antnode_data/node_$COUNT --log-output-dest /root/antnode_data/log/node_$COUNT   evm-arbitrum-one &
-    wait .5
+    sleep 0.5
 done
 
 wait
