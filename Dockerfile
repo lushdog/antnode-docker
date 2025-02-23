@@ -7,7 +7,7 @@ WORKDIR /app
 
 ARG VERSION=2025.1.2.3
 
-RUN wget https://github.com/maidsafe/autonomi/releases/download/stable-${VERSION}/stable-${VERSION}.autonomi.x86_64-unknown-linux-musl.zip \
+RUN wget https://github.com/maidsafe/autonomi/releases/download/stable-${VERSION}/${VERSION}.autonomi.x86_64-unknown-linux-musl.zip \
     && unzip -d ./temp ${VERSION}.autonomi.x86_64-unknown-linux-musl.zip \
     && mv temp/antnode . \
     && chmod +x antnode \
