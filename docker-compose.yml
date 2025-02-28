@@ -10,6 +10,9 @@ services:
     environment:
       - REWARD_ADDRESS=${REWARD_ADDRESS}
       - NODE_COUNT=${NODE_COUNT}
+    command:
+      - "--home-network"
+      - "--upnp"
     logging:
       driver: "json-file"
       options:
