@@ -2,7 +2,7 @@ name: antnode
 
 services:
   node:
-    image: ghcr.io/lushdog/antnode:latest
+    image: ghcr.io/lushdog/antnode:1.2.3
     network_mode: 'host'
     volumes:
       - ./antnode_data:/root/antnode_data
